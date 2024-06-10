@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'actors/index'
   get 'movies/index'
   #get 'directors/index'
   get("/", { :controller => "misc", :action => "homepage" })
@@ -6,4 +7,6 @@ Rails.application.routes.draw do
   get "/directors/:id" => "directors#show"
   get "/movies" => "movies#index"
   get "/movies/:id" => "movies#show"
+  get "/actors" => "actors#index"
+  get "/actors/:id" => "actors#show"
 end

@@ -51,6 +51,10 @@
   </dd>
 </dl>
 
+<hr>
+
+<h2>Filmography</h2>
+
 <% mov = Movie.all.where({ :director_id => params["id"].to_i })[0] %>
 
 <table border = "1">
@@ -77,5 +81,3 @@
   <% end %>
 
 </table>
-
-<%= params %>
