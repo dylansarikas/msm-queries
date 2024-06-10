@@ -1,0 +1,65 @@
+<h1>Movie #<%= @mov.id %> Details</h1>
+
+<a href="/movies">Go Back</a>
+
+<hr>
+
+<dl>
+  <dt>
+    Title
+  </dt>
+  <dd>
+    <%= @mov.title %>
+  </dd>
+
+  <dt>
+    Year
+  </dt>
+  <dd>
+    <%= @mov.year %>
+  </dd>
+
+  <dt>
+    Duration
+  </dt>
+  <dd>
+    <%= @mov.duration %>
+  </dd>
+
+  <dt>
+    Description
+  </dt>
+  <dd>
+    <%= @mov.description %>
+  </dd>
+
+  <dt>
+    Image
+  </dt>
+  <dd>
+    <img src="<%= @mov.image %>" style="width:250px;">
+  </dd>
+
+  <dt>
+    Director
+  </dt>
+  <dd>
+    <%= Director.all.where({ :id => @mov.director_id })[0].name %>
+  </dd>
+
+  <dt>
+    Created at
+  </dt>
+  <dd>
+    <%= @mov.created_at %>
+  </dd>
+
+  <dt>
+    Updated at
+  </dt>
+  <dd>
+    <%= @mov.updated_at %>
+  </dd>
+</dl>
+
+<hr>
