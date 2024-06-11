@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   #get 'directors/index'
   get("/", { :controller => "misc", :action => "homepage" })
   get "/directors" => "directors#index"
+  get "/directors/youngest" => "directors#youngest"
+  get "/directors/eldest" => "directors#eldest"
   get "/directors/:id" => "directors#show"
   get "/movies" => "movies#index"
   get "/movies/:id" => "movies#show"

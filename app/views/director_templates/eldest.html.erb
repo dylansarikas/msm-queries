@@ -1,0 +1,15 @@
+<h1>Eldest director</h1>
+
+<% @dir %>
+
+<% @age %>
+
+<% ugh = @age.to_time.iso8601 %>
+
+<% t = Time.new(ugh) %>
+
+<% born = Time.at(t).strftime('%B %e, %Y') %>
+
+<p>The eldest director in our dataset right now is <a href="/directors/<%= @id %>"><%= @dir %></a>, born on <%= born %>.</p>
+
+<p>(<a href="http://strftime.net/" target="_blank">http://strftime.net/</a> is handy for putting together the formatting strings for the <code>.strftime</code> method.)</p>
